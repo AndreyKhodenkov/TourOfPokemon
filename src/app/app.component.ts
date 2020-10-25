@@ -28,7 +28,7 @@ export class AppComponent {
       }
 
   ngOnInit(): void {
-    this.http.get('https://pokeapi.co/api/v2/pokemon?limit=20')
+    this.http.get('https://pokeapi.co/api/v2/pokemon?limit=50')
     .subscribe(response=>{
        this.pokemon = response
        this.pokemon = this.pokemon.results
@@ -41,7 +41,7 @@ export class AppComponent {
           this.link.get(item)
           .subscribe(itemLink=>{
             this.id = itemLink
-            this.linkPhoto = `https://pokeres.bastionbot.org/images/pokemon/${this.id.id}.png`
+            this.linkPhoto = `https://pokeres.bastionbot.org/images/pokemon/${this.id.id+1}.png`
             this.photoArray.push(this.linkPhoto)
             this.objectPokemon.push(
               {idNum:this.id.id, img:this.linkPhoto, namePoke:this.id.name}
