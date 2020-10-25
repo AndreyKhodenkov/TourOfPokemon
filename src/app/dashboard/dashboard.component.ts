@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
+import { MyserviceService } from '../myservice.service';
 export interface Pokemon{
   idNum:number
   img:string
@@ -19,14 +20,17 @@ export class DashboardComponent implements OnInit {
   linkArray:string[] = []
   photoArray:string[] = []
   objectPokemon:Pokemon[] = []
-   constructor(private http: HttpClient,
-               private link: HttpClient,
-
+  getPokemon
+  getLinkAbout
+   constructor(private link: HttpClient,
+               private getArr: MyserviceService,
+              private getLink:MyserviceService
      ){
        }
 
    ngOnInit(): void {
-     this.http.get('https://pokeapi.co/api/v2/pokemon?limit=150')
+     this.getPokemon = this.getArr.getApi()
+     this.getPokemon
      .subscribe(response=>{
         this.pokemon = response
         this.pokemon = this.pokemon.results
@@ -45,9 +49,10 @@ export class DashboardComponent implements OnInit {
                {idNum:this.id.id, img:this.linkPhoto, namePoke:this.id.name}
              )
            })
+          })
 
-         })
+        })
          console.log(this.objectPokemon);
-       })
+
    }
 }
