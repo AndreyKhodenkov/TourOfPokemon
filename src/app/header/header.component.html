@@ -1,14 +1,14 @@
 <div class="header">
   <div class="left">
-    <div class="header__title">Tour Of Pokemons</div>
+    <div [routerLink]="['/']"  class="header__title"> Tour Of Pokemons</div>
     <div class="header__buttons">
-    <button>Dashboard</button>
-    <button>Heroes</button>
+    <button [routerLink]="['/dashboard']">Dashboard</button>
+    <button [routerLink]="['/heroes']">Heroes</button>
   </div>
   </div>
   <div class="right">
     <div class="right__my-pokemons">
-      <button>My Pokemons</button>
+      <button [routerLink]="['/myHeroes']">My Pokemons</button>
     </div>
 
  </div>

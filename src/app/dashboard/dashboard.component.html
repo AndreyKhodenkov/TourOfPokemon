@@ -1,1 +1,7 @@
-<p>dashboard works!</p>
+<div class="main">
+  <div class="pokemon" *ngFor='let item of objectPokemon'>
+    <img [src]='item.img' alt="">
+    <h1>{{item.namePoke}}</h1>
+</div>
+</div>
+
