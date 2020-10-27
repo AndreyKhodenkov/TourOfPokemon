@@ -11,8 +11,7 @@ const routes: Routes = [
   {path:'dashboard',component:DashboardComponent},
   {path:'heroes', component:HeroesComponent},
   {path:'myHeroes',component:MyHeroesComponent},
-  {path:'',component:PokemonComponent},
-
+  {path:'',component:PokemonComponent}
 ]
 
 @NgModule({
