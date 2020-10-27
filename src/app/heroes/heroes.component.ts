@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { MyHeroesComponent } from '../my-heroes/my-heroes.component';
 import { MyserviceService } from '../myservice.service';
 
 export interface Info{
   name:string
-  id: any
+  ids: number
   photo: string
 }
 @Component({
@@ -12,16 +13,21 @@ export interface Info{
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.scss']
 })
+
 export class HeroesComponent implements OnInit {
   linkPokemmon:string[]=[]
   info
   pokemon:Info[]=[]
   name
   pokemonId
+  itemLink
+  arrBy
   constructor(private http: HttpClient,
-              private link: MyserviceService) { }
+              private link: MyserviceService,
+              private  arr: MyserviceService) { }
 
   ngOnInit(): void {
+    this.arrBy = this.arr.getArr()
   this.info = this.link.getApi()
   this.info
   .subscribe(response=>{
@@ -30,13 +36,14 @@ export class HeroesComponent implements OnInit {
       this.info.forEach(element => {
         this.http.get(element.url)
         .subscribe(item=>{
-          console.log(item);
-          this.pokemonId = item.id
-          this.pokemon = [
-          {name:`${name}`,id:this.pokemonId,photo:`https://pokeres.bastionbot.org/images/pokemon/${item.id+1}.png`}
+          this.itemLink = item
+          this.pokemonId = this.itemLink.id
+           this.pokemon = [
+            {name:`${name}`,ids:this.pokemonId,photo:`https://pokeres.bastionbot.org/images/pokemon/${this.pokemonId+1}.png`}
           ]
         })
       });
     })
   }
 }
+

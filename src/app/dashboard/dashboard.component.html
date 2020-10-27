@@ -1,5 +1,6 @@
 <div class="main">
-  <div class="pokemon" *ngFor='let item of objectPokemon'>
+  <div class="pokemon" *ngFor="let item of objectPokemon;index as detailId"
+  >
     <img [src]='item.img' alt="">
     <h1>{{item.namePoke}}</h1>
 </div>

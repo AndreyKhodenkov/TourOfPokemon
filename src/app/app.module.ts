@@ -8,6 +8,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { AppRoutingModule } from './app.routing';
 import { MyHeroesComponent } from './my-heroes/my-heroes.component';
+import { PokemonComponent } from './pokemon/pokemon.component';
+
+
 
 
 @NgModule({
@@ -16,7 +19,10 @@ import { MyHeroesComponent } from './my-heroes/my-heroes.component';
     HeaderComponent,
     DashboardComponent,
     HeroesComponent,
-    MyHeroesComponent
+    MyHeroesComponent,
+    PokemonComponent,
+
+
   ],
   imports: [
     BrowserModule,

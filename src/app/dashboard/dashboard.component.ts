@@ -15,7 +15,7 @@ export class DashboardComponent implements OnInit {
 
   pokemon
   url
-  id
+  idd
   linkPhoto
   linkArray:string[] = []
   photoArray:string[] = []
@@ -42,17 +42,15 @@ export class DashboardComponent implements OnInit {
          this.linkArray.forEach(item=>{
            this.link.get(item)
            .subscribe(itemLink=>{
-             this.id = itemLink
-             this.linkPhoto = `https://pokeres.bastionbot.org/images/pokemon/${this.id.id+1}.png`
+             this.idd = itemLink
+             this.linkPhoto = `https://pokeres.bastionbot.org/images/pokemon/${this.idd.id+1}.png`
              this.photoArray.push(this.linkPhoto)
              this.objectPokemon.push(
-               {idNum:this.id.id, img:this.linkPhoto, namePoke:this.id.name}
+               {idNum:this.idd.id, img:this.linkPhoto, namePoke:this.idd.name}
              )
            })
           })
 
         })
-         console.log(this.objectPokemon);
-
    }
 }
