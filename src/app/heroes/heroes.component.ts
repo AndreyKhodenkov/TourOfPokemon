@@ -17,17 +17,18 @@ export interface Info{
 export class HeroesComponent implements OnInit {
   linkPokemmon:string[]=[]
   info
-  pokemon:Info[]=[]
+  pokemon=[]
   name
   pokemonId
   itemLink
   arrBy
+  namePokemon
+  idPokemon
   constructor(private http: HttpClient,
               private link: MyserviceService,
               private  arr: MyserviceService) { }
 
   ngOnInit(): void {
-    this.arrBy = this.arr.getArr()
   this.info = this.link.getApi()
   this.info
   .subscribe(response=>{
@@ -37,13 +38,18 @@ export class HeroesComponent implements OnInit {
         this.http.get(element.url)
         .subscribe(item=>{
           this.itemLink = item
+          this.namePokemon = item.name
+          this.idPokemon = item.id
           this.pokemonId = this.itemLink.id
-           this.pokemon = [
-            {name:`${name}`,ids:this.pokemonId,photo:`https://pokeres.bastionbot.org/images/pokemon/${this.pokemonId+1}.png`}
-          ]
+           this.pokemon.push(
+             {name:`${this.namePokemon}`,id:this.idPokemon}
+            //{name:`${name}`,ids:this.pokemonId,photo:`https://pokeres.bastionbot.org/images/pokemon/${this.pokemonId+1}.png`}
+        )
         })
+
       });
     })
+    console.log(this.pokemon);
   }
 }
 

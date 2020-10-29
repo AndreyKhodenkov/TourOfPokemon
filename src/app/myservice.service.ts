@@ -17,27 +17,8 @@ export class MyserviceService {
                   ) {
   }
   getApi(){
-    return this.http.get('https://pokeapi.co/api/v2/pokemon?limit=350')
+    return this.http.get('https://pokeapi.co/api/v2/pokemon?limit=5')
   }
-getLink
-argument
-lilili:string[]=[]
-getArr(){
-  let array = []
-  let elementPokemon = ''
-    this.getLink = this.getApi()
-    this.getLink
 
-      .subscribe(arg=>{
-        this.argument = arg.results
-        this.argument.forEach(element => {
-          elementPokemon = element
-          this.lilili.push(element.url)
-        });
-      });
-      return this.lilili.forEach(item=>{
-        return array.push(item)
-      })
-    }
 }
 

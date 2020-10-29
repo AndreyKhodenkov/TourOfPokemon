@@ -6,9 +6,9 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroesComponent } from './heroes/heroes.component';
-import { AppRoutingModule } from './app.routing';
+import { AppRoutingModule } from './app-routing.module';
 import { MyHeroesComponent } from './my-heroes/my-heroes.component';
-import { PokemonComponent } from './pokemon/pokemon.component';
+import { AboutPokemonComponent } from './about-pokemon/about-pokemon.component';
 
 
 
@@ -20,7 +20,7 @@ import { PokemonComponent } from './pokemon/pokemon.component';
     DashboardComponent,
     HeroesComponent,
     MyHeroesComponent,
-    PokemonComponent,
+    AboutPokemonComponent,
 
 
   ],

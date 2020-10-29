@@ -2,7 +2,8 @@
 <div class="main">
 
   <div class="list">
-    <div class="item" *ngFor="let item of info"
+    <div class="item" *ngFor="let item of pokemon;index as id"
+    [routerLink]="['/aboutPokemon',id]"
     >
     {{item.name}}</div>
     </div>
