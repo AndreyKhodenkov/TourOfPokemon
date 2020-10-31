@@ -7,17 +7,12 @@ import { Injectable } from '@angular/core';
 })
 
 export class MyserviceService {
-  pokemon
-  url
-  linkArray:string[]=[]
-  link
-  getLinkAboutPokemon
-
+ 
   constructor(private http: HttpClient,
                   ) {
   }
   getApi(){
-    return this.http.get('https://pokeapi.co/api/v2/pokemon?limit=5')
+    return this.http.get('https://pokeapi.co/api/v2/pokemon?limit=55')
   }
 
 }

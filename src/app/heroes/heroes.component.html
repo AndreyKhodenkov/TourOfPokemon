@@ -2,12 +2,12 @@
 <div class="main">
 
   <div class="list">
-    <div class="item" *ngFor="let item of pokemon;index as id"
-    [routerLink]="['/aboutPokemon',id]"
+    <div class="item" *ngFor="let item of pokemon"
+    [routerLink]="['/aboutPokemon',item.id]"
     >
     {{item.name}}</div>
     </div>
   </div>
-  <div (click)='arrBy'></div>
+
 
 
