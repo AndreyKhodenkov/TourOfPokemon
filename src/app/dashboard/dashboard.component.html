@@ -1,7 +1,7 @@
 <div class="main">
-  <div class="pokemon" *ngFor="let item of objectPokemon;index as detailId"
+  <div class="pokemon" *ngFor="let item of objectPokemon;"
   >
-    <img [src]='item.img' alt="">
+    <img [src]='item.img' alt="" [routerLink]="['/aboutPokemon',item.idNum]">
     <h1>{{item.namePoke}}</h1>
 </div>
 </div>

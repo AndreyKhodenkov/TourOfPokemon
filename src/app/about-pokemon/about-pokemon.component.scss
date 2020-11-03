@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+.main {
+  width: 70%;
+  margin: 20px auto;
+  padding: 40px;
+  display: flex;
+  justify-content: space-around;
+  .image{
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 10px rgb(230, 230, 230);
+    padding: 45px;
+    background-color: #0096883b;
+  }
+  .right_block{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .description{
+      background-color:rgba(255, 252, 103, 0.733);
+      border-radius: 10px;
+      width: 300px;
+      height: 290px;
+      box-shadow: 0px 10px 20px rgb(134, 129, 129);
+    font-family: 'Syne Mono', monospace;
+    .id{
+      text-align: right;
+      margin-bottom: 10px;
+      padding: 4px;
+    }
+    .name{
+      font-size: 36px;
+      text-align: center;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+    }
+    .experience{
+      font-size: 20px;
+      text-align: center;
+      span{
+        border-bottom: 2px solid #000;
+        color: red;
+      }
+      margin-bottom: 20px;
+    }
+    .ability{
+      text-align: center;
+    }
+    .ability div:first-child{
+      text-transform: uppercase;
+      font-size: 26px;
+    }
+    .ability div:nth-child(2){
+      font-size: 30px;
+      color: rgb(0, 17, 255);
+    }
+    .ability div:nth-child(3),.ability div:nth-child(4),.ability div:nth-child(5){
+      font-size: 22px;
+      text-decoration: underline rgba(0, 17, 255, 0.863);
+      color: blue;
+    }
+  }
+  .button{
+    text-align: center;
+    button{
+      width: 180px;
+      height: 40px;
+      background-color: red;
+      color:white;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      outline: none;
+      cursor: pointer;
+      font-family: 'Syne Mono', monospace;
+
+    }
+  }
+}
+}

@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AboutPokemonComponent } from './about-pokemon/about-pokemon.component';
+import { MianPageComponent } from './mian-page/mian-page.component';
 
 
 
@@ -19,6 +20,7 @@ import { AboutPokemonComponent } from './about-pokemon/about-pokemon.component';
     DashboardComponent,
     HeroesComponent,
     AboutPokemonComponent,
+    MianPageComponent,
 
 
   ],

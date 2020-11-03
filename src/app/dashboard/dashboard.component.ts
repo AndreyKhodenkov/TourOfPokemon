@@ -34,7 +34,7 @@ export class DashboardComponent implements OnInit {
             this.link.get(item)
            .subscribe(itemLink=>{
               this.idd = itemLink
-              this.linkPhoto = `https://pokeres.bastionbot.org/images/pokemon/${this.idd.id+1}.png`
+              this.linkPhoto = `https://pokeres.bastionbot.org/images/pokemon/${this.idd.id}.png`
               this.photoArray.push(this.linkPhoto)
               this.objectPokemon.push(
                 {idNum:this.idd.id, img:this.linkPhoto, namePoke:this.idd.name}

@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { MyHeroesComponent } from '../my-heroes/my-heroes.component';
 import { MyserviceService } from '../myservice.service';
 
 @Component({
