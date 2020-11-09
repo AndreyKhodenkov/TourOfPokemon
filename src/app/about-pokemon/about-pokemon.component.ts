@@ -13,7 +13,8 @@ export class AboutPokemonComponent implements OnInit {
 
   constructor(private pokemonArr: MyserviceService,
     private http: HttpClient,
-    private route: ActivatedRoute ) { }
+    private route: ActivatedRoute,
+    private myPokemon: MyserviceService ) { }
 
   link
   namePok
@@ -25,9 +26,20 @@ export class AboutPokemonComponent implements OnInit {
   typePokemon
   abilities
   experience
-  arroo
+  myPoke
+  count = 0
+  addPokemon(myPoke){
+    this.count++
+    this.myPokemon.getPokemon(myPoke)
+    if(this.count === 1){
+      document.getElementById('myPk').innerHTML = `${this.count} pokemon`
+    }
+    else{
+      document.getElementById('myPk').innerHTML = `${this.count} pokemons`
+    }
+  }
+
   ngOnInit(): void {
-    this.arroo = '"../img/—Pngtree—colorful arrows red arrow creative_3977518.png"'
     this.pokemonArr.getApi()
       .subscribe(response=>{
         this.pokemonsDetail = response

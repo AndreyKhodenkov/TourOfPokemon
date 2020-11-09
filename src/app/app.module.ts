@@ -9,6 +9,8 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AboutPokemonComponent } from './about-pokemon/about-pokemon.component';
 import { MianPageComponent } from './mian-page/mian-page.component';
+import { MyPokemonComponent } from './my-pokemon/my-pokemon.component';
+import { NgsRevealModule } from 'ngx-scrollreveal';
 
 
 
@@ -21,6 +23,8 @@ import { MianPageComponent } from './mian-page/mian-page.component';
     HeroesComponent,
     AboutPokemonComponent,
     MianPageComponent,
+    MyPokemonComponent,
+
 
 
   ],
@@ -28,9 +32,12 @@ import { MianPageComponent } from './mian-page/mian-page.component';
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgsRevealModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+ }

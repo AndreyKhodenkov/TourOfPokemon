@@ -39,7 +39,7 @@
       text-align: center;
       text-transform: uppercase;
       span{
-        border-bottom: 2px solid #000;
+        border-bottom: 2px solid red;
         color: red;
       }
       margin-bottom: 20px;
@@ -53,7 +53,6 @@
     }
     .ability div:nth-child(2){
       font-size: 30px;
-      color: rgb(0, 17, 255);
     }
     .ability div:nth-child(3),.ability div:nth-child(4),.ability div:nth-child(5){
       font-size: 22px;

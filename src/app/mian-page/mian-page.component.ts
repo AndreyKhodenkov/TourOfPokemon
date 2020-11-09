@@ -9,7 +9,7 @@ export class MianPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
+  
   }
 
 }
